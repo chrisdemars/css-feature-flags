@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body {
+  background-color: rgb(37, 35, 36);
+  font-family: 'Caveat', cursive;
+}
+
+h1 {
+  color: rgb(0, 255, 76);
+  font-size: 4rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+}
+
+a {
+  font-size: 2rem;
+}
+
+.a .join-me {
+  color: rgb(239, 58, 58);
+}
+
+.a .decline {
+  color: rgb(9, 212, 235);
+}
+
+.b .join-me {
+  color: rgb(235, 9, 227);
+}
+
+.b .decline {
+  color: rgb(58, 239, 161);
+}
+
+.hide {
+  display: none
+}
