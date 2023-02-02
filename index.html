@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paintball fun with Chris!</title>
+    <style media="all">
+        body {
+            background-color: rgb(37, 35, 36);
+        }
+
+        h1 {
+            color: rgb(0, 255, 76);
+            margin-left: 30px;
+        }
+
+        .button {
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            min-height: 30px;
+            min-width: 120px;
+        }
+        
+        a {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 2rem;
+        }
+
+        .a {
+            color: rgb(239, 58, 58);
+        }
+
+        .b {
+            color: rgb(235, 9, 227);
+        }
+
+        .hide {
+            display: none
+        }
+
+    </style>
+    <script src="https://cdn.split.io/sdk/split-10.22.1.min.js"></script>
+    <script>
+
+
+        let factory = splitio({
+            core: {
+                authorizationKey: 's2959s3memm2hp1b03u34khu1sjl0106j6qr',
+                key: parseInt(Math.random() * 1000, 10) // unique identifier for your user
+            },
+            urls: {
+                sdk: "https://sdk.split.io/api",
+                events: "https://events.split.io/api",
+                auth: "https://auth.split.io/api"
+            }
+        });
+
+
+        let client = factory.client();
+
+        client.on(client.Event.SDK_READY, function () {
+            // once the SDK is ready, clear out the loader
+            const loaderContainer = document.querySelector('.loader-container');
+            loaderContainer.classList.add('hide');
+
+            const body = document.getElementById('body');
+            body.classList.remove('hide');
+
+
+            // get treatment
+            let treatment = client.getTreatment('css_demo');
+
+            // get features to flip based upon CSS classes
+            const featureA = document.querySelectorAll('.a');
+            const featureB = document.querySelectorAll('.b');
+
+            if (treatment === 'on') {
+
+                featureB.forEach(element => {
+                    element.classList.add('hide')
+                })
+            } else if (treatment === 'off') {
+                featureA.forEach(element => {
+                    element.classList.add('hide')
+                })
+            } else {
+                console.error('Error connecting to Split')
+                // default rule here
+                featureA.forEach(element => {
+                    element.classList.add('hide')
+                })
+            }
+
+        });  
+        </script>
+
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="body" class="hide">
+        <h2>Will you play paintball with me on Saturday?</h2>
+        <a href="http://twitter.com/intent/tweet?text=@saltnburnem%20This%20Is%20A%20Test" target="_blank" class="a">Join me for paintball</a>
+        <a href="http://twitter.com/intent/tweet?text=@saltnburnem%20This%20Is%20A%20Test%20" target="_blank" class="b">Join me for paintball HAHA</a>
+    </div>
+</body>
+
+</html>
