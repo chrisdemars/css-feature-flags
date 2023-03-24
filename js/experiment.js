@@ -1,8 +1,6 @@
-require('dotenv').config()
-
 let factory = splitio({
   core: {
-      authorizationKey: process.env.API_KEY,
+      authorizationKey: 'i7k5p5lr0ko0os545mg9h76n57rdvjcsgqd3',
       key: parseInt(Math.random() * 1000, 10) // unique identifier for your user
   },
   urls: {
