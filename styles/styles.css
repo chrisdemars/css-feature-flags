@@ -39,18 +39,11 @@ a {
 
 .a .join-me {
   color: rgb(239, 58, 58);
-}
-
-.a .decline {
-  color: rgb(9, 212, 235);
+  font-size: 5em;
 }
 
 .b .join-me {
   color: rgb(235, 9, 227);
-}
-
-.b .decline {
-  color: rgb(58, 239, 161);
 }
 
 .hide {
