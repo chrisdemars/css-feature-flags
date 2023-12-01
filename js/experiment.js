@@ -10,17 +10,15 @@ let factory = splitio({
   }
 });
 
-
 let client = factory.client();
 
 client.on(client.Event.SDK_READY, function () {
-  // once the SDK is ready, clear out the loader
+once the SDK is ready, clear out the loader
   const loaderContainer = document.querySelector('.loader-container');
   loaderContainer.classList.add('hide');
 
   const body = document.getElementById('body');
   body.classList.remove('hide');
-
 
   // get treatment
   let treatment = client.getTreatment('css_demo');
@@ -46,4 +44,4 @@ client.on(client.Event.SDK_READY, function () {
       })
   }
 
-});  
+});
