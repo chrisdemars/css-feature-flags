@@ -37,13 +37,66 @@ a {
   justify-content: space-evenly;
 }
 
+.a .card {
+  background-color: rgb(55, 53, 54);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 480px;
+  text-align: center;
+}
+
+.a .card h2 {
+  color: rgb(0, 255, 76);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.a .card p {
+  color: rgb(220, 220, 220);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
 .a .join-me {
   color: rgb(239, 58, 58);
-  font-size: 5em;
+  font-size: 1.5rem;
+}
+
+.b .card {
+  background-color: rgb(255, 220, 0);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 480px;
+  text-align: center;
+  border: 4px solid rgb(255, 80, 0);
+  box-shadow: 8px 8px 0px rgb(255, 80, 0);
+}
+
+.b .card h2 {
+  color: rgb(255, 30, 0);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.b .card p {
+  color: rgb(20, 20, 20);
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .b .join-me {
-  color: rgb(235, 9, 227);
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  background-color: rgb(255, 30, 0);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .hide {
